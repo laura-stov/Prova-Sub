@@ -1,0 +1,37 @@
+### Cadastrar aluno
+POST http://localhost:5151/aluno/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "Laura",
+    "sobrenome": "Santos Oliveira"
+}
+
+### Cadastrar IMC
+POST http://localhost:5151/imc/cadastrar
+Content-Type: application/json
+
+{
+    "alunoId": 1,
+    "peso": 78.12,
+    "altura": 1.80
+}
+
+### Listar imcs
+GET http://localhost:5151/imc/listar
+
+###Alterar imc
+PUT http://localhost:5151/imc/alterar/1
+Content-Type: application/json
+
+{
+    "alunoId": 1,
+    "peso": 65,
+    "altura": 1.7
+}
+
+### Listar por aluno
+GET http://localhost:5151/imc/listarporaluno/Laura/Santos Oliveira
+
+### Listar alunos
+GET http://localhost:5151/aluno/listar
